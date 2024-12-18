@@ -73,8 +73,8 @@
         }
 
         ul {
-            list-style-type: none;
-            padding-left: 0;
+            list-style-type: disc;
+            padding-left: 20px;
         }
 
         li {
@@ -109,53 +109,98 @@
         <p>Proactive IT Graduate | Expertise in Software Development, Machine Learning, and Cybersecurity</p>
         <p>Email: <a href="mailto:sksohel9515@gmail.com">sksohel9515@gmail.com</a> | Phone: +91-9515707749</p>
     </header>
+
+    <nav>
+        <a href="#objective" class="nav-link">Objective</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
     <main>
         <section id="objective">
             <h2>Objective</h2>
-            <p>Proactive IT graduate with a strong foundation in software development, machine learning, cybersecurity, and Android development...</p>
+            <ul>
+                <li>Proactive IT graduate with a strong foundation in software development, machine learning, cybersecurity, and Android development.</li>
+                <li>Proficient in Python, Salesforce, and data analysis, with a proven track record of building scalable, high-performing solutions.</li>
+                <li>Seeking an entry-level role to contribute technical expertise, deliver innovative solutions, and grow within a dynamic organization.</li>
+            </ul>
         </section>
 
         <section id="education">
             <h2>Education</h2>
             <ul>
-                <li><strong>Bachelor of Technology</strong> in Information Technology...</li>
-                <li>Intermediate (MPC)...</li>
-                <li>Secondary School Certificate (SSC)...</li>
+                <li><strong>Bachelor of Technology</strong> in Information Technology, Kallam HaranadhaReddy Institute of Technology, Guntur (CGPA: 8.3, 2021–2025)</li>
+                <li>Intermediate (MPC), Sri Chaitanya Junior College, Guntur (CGPA: 8.2, 2018-2020)</li>
+                <li>Secondary School Certificate (SSC), St Patrick’s High School, Guntur (CGPA: 8.19, 2017-2018)</li>
             </ul>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
             <ul>
-                <li>Programming Languages: C, Python, Java...</li>
-                <li>Tools & Frameworks: MySQL, TensorFlow...</li>
-                <li>Core Competencies: Data Analysis, Machine Learning...</li>
+                <li>Programming Languages: C, Python, Java, HTML, CSS, JavaScript</li>
+                <li>Tools & Frameworks: MySQL, TensorFlow, Scikit-learn, Apex, Visualforce, Lightning Web Components</li>
+                <li>Core Competencies: Data Analysis, Machine Learning, Cybersecurity, Android Development, Feature Engineering</li>
             </ul>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <p>Descriptive Analysis and Feature Engineering...</p>
+            <p><strong>Descriptive Analysis and Feature Engineering for Restaurant Data (10/2023 - 12/2023)</strong></p>
+            <ul>
+                <li>Performed data analysis and feature engineering, improving model accuracy by 20%.</li>
+                <li>Reduced data processing errors by 50% using streamlined preprocessing workflows.</li>
+                <li>Designed and tested predictive models to ensure consistent performance across datasets.</li>
+            </ul>
         </section>
 
         <section id="experience">
             <h2>Professional Experience</h2>
             <ul>
-                <li><strong>Salesforce Developer Virtual Internship...</strong></li>
+                <li><strong>Salesforce Developer Virtual Internship</strong>, Smart Internz (08/2023 - 10/2023)
+                    <ul>
+                        <li>Customized Salesforce solutions using Apex, Visualforce, and Lightning Web Components.</li>
+                        <li>Automated workflows and improved business processes by 30%.</li>
+                    </ul>
+                </li>
+                <li><strong>Cyber Security Virtual Internship</strong>, IBM (10/2023 - 11/2023)
+                    <ul>
+                        <li>Gained hands-on experience in threat detection, risk analysis, and cybersecurity frameworks.</li>
+                    </ul>
+                </li>
+                <li><strong>Machine Learning Virtual Internship</strong>, Bharat Intern (01/2024 - 02/2024)
+                    <ul>
+                        <li>Developed predictive models using Python, TensorFlow, and scikit-learn, enhancing model accuracy by 15%.</li>
+                    </ul>
+                </li>
+                <li><strong>Android Developer Virtual Internship</strong>, EduSkills (04/2024 - 06/2024)
+                    <ul>
+                        <li>Built and optimized Android applications using Java and Kotlin, reducing app load times by 20%.</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
         <section id="achievements">
             <h2>Achievements</h2>
             <ul>
-                <li>Speared a public awareness campaign...</li>
+                <li>Led a public awareness campaign on Cyber Security and Technology, educating over 500 students.</li>
+                <li>Actively contributed to NSS initiatives, positively impacting over 500 residents in Dasaripalem village.</li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:sksohel9515@gmail.com">sksohel9515@gmail.com</a></p>
-            <p>Phone: +91-9515707749</p>
+            <ul>
+                <li>Email: <a href="mailto:sksohel9515@gmail.com">sksohel9515@gmail.com</a></li>
+                <li>Phone: +91-9515707749</li>
+                <li>GitHub: <a href="https://github.com/Sohel12111" target="_blank">https://github.com/Sohel12111</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/sohel-shaik-b308252ab" target="_blank">https://www.linkedin.com/in/sohel-shaik-b308252ab</a></li>
+            </ul>
         </section>
     </main>
 
@@ -164,46 +209,15 @@
     </footer>
 
     <script>
-        // JavaScript to highlight the active section and link
         const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section');
 
-        // Function to handle click event and add active class to the clicked link
         navLinks.forEach(link => {
             link.addEventListener('click', function (event) {
-                // Prevent smooth scrolling
                 event.preventDefault();
 
-                // Directly jump to the section
                 const targetSection = document.querySelector(this.getAttribute('href'));
-                window.scrollTo({
-                    top: targetSection.offsetTop,
-                    behavior: 'auto' // Instantly jump, no smooth scroll
-                });
+                targetSection.scrollIntoView({ behavior: 'auto', block: 'start' });
 
-                // Highlight active link
                 navLinks.forEach(link => link.classList.remove('active'));
                 this.classList.add('active');
             });
-        });
-
-        // Listen to scroll event to update active section highlighting
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 50) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            sections.forEach(section => {
-                section.classList.remove('active');
-                if (section.getAttribute('id') === current) {
-                    section.classList.add('active');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
