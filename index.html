@@ -5,51 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sohel Shaik - Portfolio</title>
     <style>
+        /* General Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Times New Roman", Times, serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f5f5f5; /* Light gray background */
+            color: #333; /* Dark text color for readability */
         }
+
+        /* Header Styling */
         header {
-            background-color: #333;
-            color: white;
+            background-color: #2c3e50; /* Dark navy header */
+            color: #ecf0f1; /* Light gray text */
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.1rem;
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e; /* Slightly lighter navy */
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #ecf0f1; /* Light gray text */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #1abc9c; /* Teal hover effect */
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
         main {
             margin: 20px;
         }
+
         section {
-            background-color: white;
+            background-color: #ffffff; /* White section background */
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
+
         h2 {
-            color: #333;
+            color: #2c3e50; /* Match header's navy color for headings */
         }
+
         ul {
             list-style-type: none;
             padding-left: 0;
         }
+
         li {
             padding: 5px 0;
         }
+
+        /* Footer Styling */
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #2c3e50; /* Dark navy footer */
+            color: #ecf0f1; /* Light gray text */
             text-align: center;
             padding: 10px;
         }
+
+        /* Links */
         a {
-            color: #0066cc;
+            color: #3498db; /* Blue links */
             text-decoration: none;
         }
+
         a:hover {
+            color: #1abc9c; /* Teal hover effect */
             text-decoration: underline;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -59,15 +112,26 @@
         <p>Proactive IT Graduate | Expertise in Software Development, Machine Learning, and Cybersecurity</p>
     </header>
 
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#objective">Objective</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <main>
         <!-- Objective Section -->
-        <section>
+        <section id="objective">
             <h2>Objective</h2>
             <p>Proactive IT graduate with a strong foundation in software development, machine learning, cybersecurity, and Android development. Proficient in Python, Salesforce, and data analysis, with a proven track record of building scalable, high-performing solutions. Seeking an entry-level role to contribute technical expertise, deliver innovative solutions, and grow within a dynamic organization.</p>
         </section>
 
         <!-- Education Section -->
-        <section>
+        <section id="education">
             <h2>Education</h2>
             <ul>
                 <li><strong>Bachelor of Technology</strong> in Information Technology, Kallam HaranadhaReddy Institute of Technology, Guntur (CGPA: 8.3, 2021–2025)</li>
@@ -77,7 +141,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section>
+        <section id="skills">
             <h2>Skills</h2>
             <ul>
                 <li>Programming Languages: C, Python, Java, HTML, CSS, JavaScript</li>
@@ -87,7 +151,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section>
+        <section id="projects">
             <h2>Projects</h2>
             <p><strong>Descriptive Analysis and Feature Engineering for Restaurant Data (10/2023 - 12/2023)</strong></p>
             <ul>
@@ -98,7 +162,7 @@
         </section>
 
         <!-- Professional Experience Section -->
-        <section>
+        <section id="experience">
             <h2>Professional Experience</h2>
             <ul>
                 <li><strong>Salesforce Developer Virtual Internship</strong>, Smart Internz (08/2023 - 10/2023)</li>
@@ -122,7 +186,7 @@
         </section>
 
         <!-- Achievements Section -->
-        <section>
+        <section id="achievements">
             <h2>Achievements</h2>
             <ul>
                 <li>Speared a public awareness campaign on Cyber Security and Technology, educating over 500 students.</li>
@@ -131,7 +195,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section>
+        <section id="contact">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:sksohel9515@gmail.com">sksohel9515@gmail.com</a></p>
             <p>Phone: +91-9515707749</p>
