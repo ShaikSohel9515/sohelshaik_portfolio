@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOHEL SHAIK - Portfolio</title>
+    <title>SOHEL SHAIK | Portfolio</title>
     <style>
         /* General Styling */
         body {
@@ -11,7 +11,6 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
             background-color: #f5f5f5;
             color: #333;
         }
@@ -31,31 +30,32 @@
 
         .container {
             display: flex;
+            flex-direction: column;
             width: 100%;
         }
 
         /* Sidebar Styling */
         .sidebar {
-            width: 250px;
+            display: flex;
+            justify-content: center;
             background-color: #34495e;
-            color: #ecf0f1;
-            padding: 15px 0;
-            position: relative;
-            top: 0;
-            height: 100vh;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
         }
 
         .sidebar ul {
             list-style-type: none;
-            padding: 0;
+            display: flex;
+            gap: 15px;
             margin: 0;
+            padding: 0;
         }
 
         .sidebar ul li {
-            padding: 10px 20px;
             cursor: pointer;
+            color: #ecf0f1;
             font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 4px;
         }
 
         .sidebar ul li:hover, .sidebar ul li.active {
@@ -65,7 +65,6 @@
 
         /* Main Content Styling */
         .main-content {
-            flex: 1;
             padding: 20px;
         }
 
@@ -122,6 +121,8 @@
     <div class="container">
         <div class="sidebar">
             <ul>
+                <li class="sidebar-link" data-target="home">Home</li>
+                <li class="sidebar-link" data-target="about">About Me</li>
                 <li class="sidebar-link" data-target="education">Education</li>
                 <li class="sidebar-link" data-target="skills">Skills</li>
                 <li class="sidebar-link" data-target="projects">Projects</li>
@@ -132,7 +133,17 @@
         </div>
 
         <div class="main-content">
-            <section id="education" class="content-section active">
+            <section id="home" class="content-section active">
+                <h2>Home</h2>
+                <p>Welcome to my portfolio! Explore my skills, projects, and professional journey.</p>
+            </section>
+
+            <section id="about" class="content-section">
+                <h2>About Me</h2>
+                <p>I am a proactive IT graduate with a strong foundation in software development, machine learning, cybersecurity, and Android development. Passionate about building innovative solutions and contributing to impactful projects.</p>
+            </section>
+
+            <section id="education" class="content-section">
                 <h2>Education</h2>
                 <ul>
                     <li>Bachelor of Technology | Information Technology | Kallam HaranadhaReddy Institute of Technology | Guntur | CGPA: 8.3 | 2021–2025</li>
