@@ -4,85 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOHEL SHAIK | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Styling */
         body {
-            font-family: "Times New Roman", Times, serif;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #f9f9f9;
             color: #333;
         }
 
         header {
-            background-color: #2c3e50;
-            color: #ecf0f1;
+            background: linear-gradient(90deg, #1abc9c, #16a085);
+            color: #ffffff;
             padding: 20px;
             text-align: center;
-            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+        }
+
+        header a {
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: underline;
         }
 
         .container {
             display: flex;
-            flex-direction: column;
-            width: 100%;
+            flex-wrap: wrap;
         }
 
         /* Sidebar Styling */
         .sidebar {
-            display: flex;
-            justify-content: center;
-            background-color: #34495e;
-            padding: 10px 0;
+            width: 20%;
+            background: #34495e;
+            color: #ecf0f1;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
         .sidebar ul {
-            list-style-type: none;
-            display: flex;
-            gap: 15px;
-            margin: 0;
+            list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         .sidebar ul li {
-            cursor: pointer;
-            color: #ecf0f1;
+            text-align: center;
+            margin: 10px 0;
             font-size: 1rem;
-            padding: 10px 20px;
-            border-radius: 4px;
+            padding: 10px;
+            transition: background 0.3s;
+            cursor: pointer;
         }
 
         .sidebar ul li:hover, .sidebar ul li.active {
-            background-color: #1abc9c;
-            color: #fff;
+            background: #1abc9c;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .sidebar ul li i {
+            margin-right: 8px;
         }
 
         /* Main Content Styling */
         .main-content {
+            flex: 1;
             padding: 20px;
+            overflow: hidden;
         }
 
         .content-section {
             display: none;
             background-color: #ffffff;
             padding: 20px;
+            margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
         }
 
         .content-section.active {
             display: block;
         }
 
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         h2 {
-            color: #3498db;
+            color: #16a085;
+            font-weight: 600;
             text-transform: uppercase;
+            margin-bottom: 15px;
         }
 
         ul {
@@ -95,15 +132,20 @@
         }
 
         footer {
-            background-color: #2c3e50;
+            background-color: #34495e;
             color: #ecf0f1;
             text-align: center;
             padding: 10px;
             margin-top: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
         }
 
         a {
-            color: #3498db;
+            color: #16a085;
             text-decoration: none;
         }
 
@@ -111,29 +153,43 @@
             color: #1abc9c;
             text-decoration: underline;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+            }
+
+            .sidebar ul {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .main-content {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Sohel Shaik's Portfolio</h1>
-         <p class="contact-details">
-             Guntur, Andhra Pradesh, India - 522003<br>
-            Email: <a href="mailto:sksohel9515@gmail.com" style="color: #1abc9c;">sksohel9515@gmail.com</a><br>
-            Phone: +91-9515707749
-        </p>
+        <p>Guntur, Andhra Pradesh, India - 522003 | Email: <a href="mailto:sksohel9515@gmail.com">sksohel9515@gmail.com</a> | Phone: +91-9515707749</p>
     </header>
 
     <div class="container">
         <div class="sidebar">
             <ul>
-                <li class="sidebar-link" data-target="home">Home</li>
-                <li class="sidebar-link" data-target="about">About Me</li>
-                <li class="sidebar-link" data-target="education">Education</li>
-                <li class="sidebar-link" data-target="skills">Skills</li>
-                <li class="sidebar-link" data-target="projects">Projects</li>
-                <li class="sidebar-link" data-target="experience">Experience</li>
-                <li class="sidebar-link" data-target="achievements">Achievements</li>
-                <li class="sidebar-link" data-target="contact">Contact</li>
+                <li class="sidebar-link active" data-target="home"><i class="fas fa-home"></i> Home</li>
+                <li class="sidebar-link" data-target="about"><i class="fas fa-user"></i> About Me</li>
+                <li class="sidebar-link" data-target="education"><i class="fas fa-graduation-cap"></i> Education</li>
+                <li class="sidebar-link" data-target="skills"><i class="fas fa-tools"></i> Skills</li>
+                <li class="sidebar-link" data-target="projects"><i class="fas fa-project-diagram"></i> Projects</li>
+                <li class="sidebar-link" data-target="experience"><i class="fas fa-briefcase"></i> Experience</li>
+                <li class="sidebar-link" data-target="achievements"><i class="fas fa-award"></i> Achievements</li>
+                <li class="sidebar-link" data-target="contact"><i class="fas fa-envelope"></i> Contact</li>
             </ul>
         </div>
 
@@ -175,7 +231,6 @@
                     <li>Designed and tested predictive models to ensure consistent performance across datasets.</li>
                 </ul>
             </section>
-
             <section id="experience" class="content-section">
                 <h2>Professional Experience</h2>
                 <p><strong>Salesforce Developer Virtual Internship</strong>, Smart Internz (08/2023 - 10/2023)</p>
