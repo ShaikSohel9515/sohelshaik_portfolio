@@ -7,7 +7,7 @@
     <style>
         /* General Styling */
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Times New Roman", Times, serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -25,18 +25,7 @@
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-
-        header p {
-            margin: 5px 0;
-            font-size: 1.2rem;
-        }
-
-        header .contact-details {
-            margin-top: 10px;
-            font-size: 1rem;
+            font-size: 2rem;
         }
 
         .container {
@@ -64,7 +53,7 @@
         .sidebar ul li {
             cursor: pointer;
             color: #ecf0f1;
-            font-size: 1.1rem;
+            font-size: 1rem;
             padding: 10px 20px;
             border-radius: 4px;
         }
@@ -94,8 +83,6 @@
         h2 {
             color: #3498db;
             text-transform: uppercase;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
         }
 
         ul {
@@ -129,10 +116,10 @@
 <body>
     <header>
         <h1>Sohel Shaik's Portfolio</h1>
-        <p class="contact-details">
-         Guntur, Andhra Pradesh, India - 522003<br>
+         <p class="contact-details">
+             Guntur, Andhra Pradesh, India - 522003<br>
             Email: <a href="mailto:sksohel9515@gmail.com" style="color: #1abc9c;">sksohel9515@gmail.com</a><br>
-            Contact: +91-9515707749
+            Phone: +91-9515707749
         </p>
     </header>
 
@@ -156,7 +143,7 @@
                 <p>Welcome to Sohel Shaik's portfolio! Explore my skills, projects, and professional journey.</p>
             </section>
 
-            <section id="about" class="content-section">
+            <section id="about me" class="content-section">
                 <h2>About Me</h2>
                 <p>I am a proactive IT graduate with a strong foundation in software development, machine learning, cybersecurity, and Android development. Passionate about building innovative solutions and contributing to impactful projects.</p>
             </section>
@@ -227,4 +214,34 @@
                     <li>LinkedIn: <a href="https://www.linkedin.com/in/sohel-shaik-b308252ab" target="_blank">https://www.linkedin.com/in/sohel-shaik-b308252ab</a></li>
                 </ul>
             </section>
-       
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sohel Shaik. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const links = document.querySelectorAll('.sidebar-link');
+        const sections = document.querySelectorAll('.content-section');
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove active class from all links
+                links.forEach(l => l.classList.remove('active'));
+
+                // Add active class to clicked link
+                link.classList.add('active');
+
+                // Show the corresponding section and hide others
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === link.getAttribute('data-target')) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
