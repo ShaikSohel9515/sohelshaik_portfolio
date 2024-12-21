@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOHEL SHAIK | Email: sksohel9515@gmail.com | Phone: +91-9515707749 | Guntur-522003 </title>
+    <title>SOHEL SHAIK | Portfolio</title>
     <style>
         /* General Styling */
         body {
@@ -11,6 +11,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            display: flex;
             background-color: #f5f5f5;
             color: #333;
         }
@@ -20,14 +21,12 @@
             color: #ecf0f1;
             padding: 20px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            width: 100%;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         header p {
@@ -35,36 +34,56 @@
             font-size: 1.1rem;
         }
 
-        nav {
+        .container {
             display: flex;
-            justify-content: center;
+            width: 100%;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
             background-color: #34495e;
-            padding: 10px 0;
-        }
-
-        nav a {
             color: #ecf0f1;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
-        nav a:hover,
-        nav a.active {
-            color: #1abc9c;
-            text-decoration: underline;
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
 
-        main {
-            margin: 20px;
+        .sidebar ul li {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
         }
 
-        section {
+        .sidebar ul li:hover, .sidebar ul li.active {
+            background-color: #1abc9c;
+            color: #fff;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content-section {
+            display: none;
             background-color: #ffffff;
             padding: 20px;
-            margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section.active {
+            display: block;
         }
 
         h2 {
@@ -86,6 +105,7 @@
             color: #ecf0f1;
             text-align: center;
             padding: 10px;
+            margin-top: 20px;
         }
 
         a {
@@ -97,91 +117,129 @@
             color: #1abc9c;
             text-decoration: underline;
         }
-
-        section.active {
-            border-left: 5px solid #3498db;
-        }
     </style>
 </head>
 <body>
     <header>
         <h1>Sohel Shaik's Portfolio</h1>
         <p>Proactive IT Graduate | Expertise in Software Development, Machine Learning, and Cybersecurity</p>
-        <p>Email: <a href="mailto:sksohel9515@gmail.com">sksohel9515@gmail.com</a> | Phone: +91-9515707749| Guntur: 522003 </p>
     </header>
-    <main>
-        <section id="objective">
-            <h2>Objective</h2>
-            <p>Proactive IT graduate with a strong foundation in software development, machine learning, cybersecurity, and Android development.</p>
-            <br>Proficient in Python, Salesforce, and data analysis, with a proven track record of building scalable, high-performing solutions.</br>
-            <br>seeking an entry-level role to contribute technical expertise, deliver innovative solutions, and grow within a dynamic organization.</br>
-        </section>
 
-        <section id="education">
-            <h2>Education</h2>
+    <div class="container">
+        <div class="sidebar">
             <ul>
-                <li>Bachelor of Technology | Information Technology | Kallam HaranadhaReddy Institute of Technology | Guntur | CGPA: 8.3 | 2021–2025 </li>
-                <li>Intermediate (MPC) | Sri Chaitanya Junior College | Guntur | CGPA: 8.2 | 2018-2020 </li>
-                <li>Secondary School Certificate (SSC) | St Patrick’s High School | Guntur | CGPA: 8.19 | 2017-2018 </li>
+                <li class="sidebar-link" data-target="objective">Objective</li>
+                <li class="sidebar-link" data-target="education">Education</li>
+                <li class="sidebar-link" data-target="skills">Skills</li>
+                <li class="sidebar-link" data-target="projects">Projects</li>
+                <li class="sidebar-link" data-target="experience">Experience</li>
+                <li class="sidebar-link" data-target="achievements">Achievements</li>
+                <li class="sidebar-link" data-target="contact">Contact</li>
             </ul>
-        </section>
+        </div>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming Languages: C, Python, Java, HTML, CSS, JavaScript</li>
-                <li>Tools & Frameworks: MySQL, TensorFlow, Scikit-learn, Apex, Visualforce, Lightning Web Components</li>
-                <li>Core Competencies: Data Analysis, Machine Learning, Cybersecurity, Android Development, Feature Engineering</li>
-            </ul>
-        </section>
+        <div class="main-content">
+            <section id="objective" class="content-section active">
+                <h2>Objective</h2>
+                <p>Proactive IT graduate with a strong foundation in software development, machine learning, cybersecurity, and Android development.</p>
+                <p>Proficient in Python, Salesforce, and data analysis, with a proven track record of building scalable, high-performing solutions.</p>
+                <p>Seeking an entry-level role to contribute technical expertise, deliver innovative solutions, and grow within a dynamic organization.</p>
+            </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p><strong>Descriptive Analysis and Feature Engineering for Restaurant Data (10/2023 - 12/2023)</strong></p>
-            <ul>
-                <li>Performed data analysis and feature engineering, improving model accuracy by 20%.</li>
-                <li>Reduced data processing errors by 50% using streamlined preprocessing workflows.</li>
-                <li>Designed and tested predictive models to ensure consistent performance across datasets.</li>
-            </ul>
-        </section>
+            <section id="education" class="content-section">
+                <h2>Education</h2>
+                <ul>
+                    <li>Bachelor of Technology | Information Technology | Kallam HaranadhaReddy Institute of Technology | Guntur | CGPA: 8.3 | 2021–2025</li>
+                    <li>Intermediate (MPC) | Sri Chaitanya Junior College | Guntur | CGPA: 8.2 | 2018-2020</li>
+                    <li>Secondary School Certificate (SSC) | St Patrick’s High School | Guntur | CGPA: 8.19 | 2017-2018</li>
+                </ul>
+            </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <strong>Salesforce Developer Virtual Internship</strong>, Smart Internz (08/2023 - 10/2023)
-            <li>Customized Salesforce solutions using Apex, Visualforce, and Lightning Web Components.</li>
-            <li>Automated workflows and improved business processes by 30%.</li>
+            <section id="skills" class="content-section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Programming Languages: C, Python, Java, HTML, CSS, JavaScript</li>
+                    <li>Tools & Frameworks: MySQL, TensorFlow, Scikit-learn, Apex, Visualforce, Lightning Web Components</li>
+                    <li>Core Competencies: Data Analysis, Machine Learning, Cybersecurity, Android Development, Feature Engineering</li>
+                </ul>
+            </section>
 
-            <strong>Cyber Security Virtual Internship</strong>, IBM (10/2023 - 11/2023)
-            <li>Gained hands-on experience in threat detection, risk analysis, and cybersecurity frameworks.</li>
+            <section id="projects" class="content-section">
+                <h2>Projects</h2>
+                <p><strong>Descriptive Analysis and Feature Engineering for Restaurant Data (10/2023 - 12/2023)</strong></p>
+                <ul>
+                    <li>Performed data analysis and feature engineering, improving model accuracy by 20%.</li>
+                    <li>Reduced data processing errors by 50% using streamlined preprocessing workflows.</li>
+                    <li>Designed and tested predictive models to ensure consistent performance across datasets.</li>
+                </ul>
+            </section>
 
-            <strong>Machine Learning Virtual Internship</strong>, Bharat Intern (01/2024 - 02/2024)
-            <li>Developed predictive models using Python, TensorFlow, and scikit-learn, enhancing model accuracy by 15%.</li>
+            <section id="experience" class="content-section">
+                <h2>Professional Experience</h2>
+                <p><strong>Salesforce Developer Virtual Internship</strong>, Smart Internz (08/2023 - 10/2023)</p>
+                <ul>
+                    <li>Customized Salesforce solutions using Apex, Visualforce, and Lightning Web Components.</li>
+                    <li>Automated workflows and improved business processes by 30%.</li>
+                </ul>
+                <p><strong>Cyber Security Virtual Internship</strong>, IBM (10/2023 - 11/2023)</p>
+                <ul>
+                    <li>Gained hands-on experience in threat detection, risk analysis, and cybersecurity frameworks.</li>
+                </ul>
+                <p><strong>Machine Learning Virtual Internship</strong>, Bharat Intern (01/2024 - 02/2024)</p>
+                <ul>
+                    <li>Developed predictive models using Python, TensorFlow, and scikit-learn, enhancing model accuracy by 15%.</li>
+                </ul>
+                <p><strong>Android Developer Virtual Internship</strong>, EduSkills (04/2024 - 06/2024)</p>
+                <ul>
+                    <li>Built and optimized Android applications using Java and Kotlin, reducing app load times by 20%.</li>
+                </ul>
+            </section>
 
-            <strong>Android Developer Virtual Internship</strong>, EduSkills (04/2024 - 06/2024)
-            <li>Built and optimized Android applications using Java and Kotlin, reducing app load times by 20%.</li>
-        </section>
+            <section id="achievements" class="content-section">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>Led a public awareness campaign on Cyber Security and Technology, educating over 500 students.</li>
+                    <li>Actively contributed to NSS initiatives, positively impacting over 500 residents in Dasaripalem village.</li>
+                </ul>
+            </section>
 
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <ul>
-                <li>Led a public awareness campaign on Cyber Security and Technology, educating over 500 students.</li>
-                <li>Actively contributed to NSS initiatives, positively impacting over 500 residents in Dasaripalem village.</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <ul>
-                <li>Email: <a href="mailto:sksohel9515@gmail.com">sksohel9515@gmail.com</a></li>
-                <li>Phone: +91-9515707749</li>
-                <li>GitHub: <a href="https://github.com/Sohel12111" target="_blank">https://github.com/Sohel12111</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/sohel-shaik-b308252ab" target="_blank">https://www.linkedin.com/in/sohel-shaik-b308252ab</a></li>
-            </ul>
-        </section>
-    </main>
+            <section id="contact" class="content-section">
+                <h2>Contact</h2>
+                <ul>
+                    <li>Email: <a href="mailto:sksohel9515@gmail.com">sksohel9515@gmail.com</a></li>
+                    <li>Phone: +91-9515707749</li>
+                    <li>GitHub: <a href="https://github.com/Sohel12111" target="_blank">https://github.com/Sohel12111</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/in/sohel-shaik-b308252ab" target="_blank">https://www.linkedin.com/in/sohel-shaik-b308252ab</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Sohel Shaik. All rights reserved.</p>
     </footer>
+
+    <script>
+        const links = document.querySelectorAll('.sidebar-link');
+        const sections = document.querySelectorAll('.content-section');
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove active class from all links
+                links.forEach(l => l.classList.remove('active'));
+
+                // Add active class to clicked link
+                link.classList.add('active');
+
+                // Show the corresponding section and hide others
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === link.getAttribute('data-target')) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
